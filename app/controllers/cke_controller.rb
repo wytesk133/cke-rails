@@ -1,0 +1,2 @@
+class CkeController < ApplicationController
+end
