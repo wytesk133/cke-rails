@@ -6,7 +6,8 @@ Rails.application.routes.draw do
   root 'cke#index'
 
   post 'upload' => 'cke#upload'
-  post 'browse' => 'cke#browse'
+  get 'view/*filename' => 'cke#view', format: false
+  get 'browse' => 'cke#browse'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
