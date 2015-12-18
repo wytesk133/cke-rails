@@ -1,0 +1,5 @@
+<% 'http://docs.ckeditor.com/#!/guide/dev_file_browser_api' %>
+
+<script>
+  window.parent.CKEDITOR.tools.callFunction(<%= params[:CKEditorFuncNum] %>, '<%= @url if defined? @url %>', '<%= @message.html_safe if defined? @message %>')
+</script>

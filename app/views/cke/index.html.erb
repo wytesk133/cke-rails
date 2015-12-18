@@ -1,8 +1,8 @@
 <textarea id="editor1"></textarea>
 <script>
   CKEDITOR.replace('editor1', {
-    filebrowserBrowseUrl: '/browse',
-    filebrowserUploadUrl: '/upload',
+    filebrowserBrowseUrl: '/browse?page_id=1',
+    filebrowserUploadUrl: '/upload?page_id=1&<%= :authenticity_token %>=<%= URI.escape(form_authenticity_token, /\W/) %>',
     extraPlugins: 'uploadimage'
   })
 </script>
